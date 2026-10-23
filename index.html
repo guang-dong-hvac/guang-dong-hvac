@@ -84,8 +84,8 @@
         :root {
             --navy: #0f2a43;
             --navy-2: #16395c;
-            --orange: #22c55e;
-            --orange-dark: #15803d;
+            --orange: #07C160;
+            --orange-dark: #06AD56;
             --blue: #0ea5e9;
             --ink: #243242;
             --muted: #6b7f8d;
@@ -126,7 +126,7 @@
             flex: none; display: inline-flex; align-items: center; gap: 8px;
             background: var(--orange); color: #fff; font-weight: 800; font-size: 1.1rem;
             padding: 12px 20px; border-radius: 999px; text-decoration: none;
-            box-shadow: 0 4px 14px rgba(34,197,94,.45);
+            box-shadow: 0 4px 14px rgba(7,193,96,.45);
         }
         .header-call:active { transform: scale(.97); }
 
@@ -150,7 +150,7 @@
         }
         .hero::after {
             content: ""; position: absolute; right: -80px; top: -80px; width: 280px; height: 280px;
-            background: radial-gradient(circle, rgba(34,197,94,.35), transparent 70%);
+            background: radial-gradient(circle, rgba(7,193,96,.35), transparent 70%);
             pointer-events: none;
         }
         .hero h1 { font-size: clamp(2rem, 8.5vw, 3.2rem); line-height: 1.25; font-weight: 900; letter-spacing: .01em; }
@@ -165,7 +165,7 @@
             transition: transform .12s ease;
         }
         .btn:active { transform: scale(.97); }
-        .btn-call { background: var(--orange); color: #fff; box-shadow: 0 6px 20px rgba(34,197,94,.5); }
+        .btn-call { background: var(--orange); color: #fff; box-shadow: 0 6px 20px rgba(7,193,96,.5); }
         .btn-sms { background: rgba(255,255,255,.14); color: #fff; border: 2px solid rgba(255,255,255,.55); }
         .trust { display: flex; flex-wrap: wrap; gap: 10px 18px; font-size: 1rem; color: #cfe0f4; }
         .trust span::before { content: "✓ "; color: var(--orange); font-weight: 800; }
@@ -234,9 +234,12 @@
         .contact-card h3 { font-size: 1.3rem; color: var(--navy); }
         .contact-card p { font-size: 1.12rem; }
         .contact-card a[href^="tel:"], .contact-card a[href^="sms:"] { color: var(--orange-dark); font-weight: 800; text-decoration: none; }
-        .contact-card .btn-call { color: #fff; }
+        .contact-card a[href^="tel:"].btn-call { color: #fff; }
         .map-wrap { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
         .map-wrap iframe { width: 100%; height: 300px; border: 0; display: block; }
+        .map-link { text-align: center; margin-top: 12px; font-size: 1.02rem; }
+        .map-link a { color: var(--green-dark); font-weight: 800; text-decoration: none; }
+        .map-link a:hover { text-decoration: underline; }
 
         /* ---- Footer ---- */
         footer { background: #0b1f33; color: #9db8d6; padding: 34px 0 110px; font-size: 1rem; text-align: center; }
@@ -308,7 +311,7 @@
     <header class="site-header">
         <div class="wrap">
             <div class="brand">广东冷暖水电<small>GUANG DONG HVAC · 纽约</small></div>
-            <a class="header-call" href="tel:929-461-6893">☎ 929-461-6893</a>
+            <a class="header-call" href="tel:929-461-6893">📱 929-461-6893</a>
         </div>
     </header>
     <nav class="quick-nav" aria-label="主导航">
@@ -329,8 +332,8 @@
                 <p class="tagline">专业维修/安装水喉电路，各类冷冻设备。服务范围：中央空调，码柜，冷库，补雪种，修理水管，电线电路，安装保养电热炉，暖气炉，热水炉等等。</p>
                 <p class="tagline">十几年维修经验，一直尽力做到最好。服务纽约长岛、曼哈顿、法拉盛、布鲁克林、新泽西、宾州及周边地区，讲中文，来电议价。</p>
                 <div class="cta-row">
-                    <a class="btn btn-call" href="tel:929-461-6893">☎ 点击拨打电话</a>
-                    <a class="btn btn-sms" href="sms:929-461-6893">✉ 发短信咨询</a>
+                    <a class="btn btn-call" href="tel:929-461-6893">📱 点击拨打电话</a>
+                    <a class="btn btn-sms" href="sms:929-461-6893">💬 发短信咨询</a>
                 </div>
                 <p class="welcome">欢迎来电 <a href="tel:929-461-6893">929-461-6893</a></p>
                 <img src="img/buidling.jpg" alt="广东冷暖水电 — 纽约中央空调水喉电路维修安装团队" class="hero-img" loading="lazy">
@@ -486,11 +489,12 @@
                         <p>来电议价｜上门检查费视地理位置而定</p>
                         <p class="en-line">We have been serving the NYC area for more than ten years, definitely worth you to trust.</p>
                         <p>欢迎打电话/发短信到：<a href="tel:929-461-6893">929-461-6893</a></p>
-                        <a class="btn btn-call" href="tel:929-461-6893">☎ 点击拨打电话</a>
-                        <a class="btn btn-sms" href="sms:929-461-6893" style="border-color: var(--line); color: var(--navy); background: var(--bg-soft);">✉ 发短信咨询</a>
+                        <a class="btn btn-call" href="tel:929-461-6893">📱 点击拨打电话</a>
+                        <a class="btn btn-sms" href="sms:929-461-6893" style="border-color: var(--line); color: var(--navy); background: var(--bg-soft);">💬 发短信咨询</a>
                     </div>
                     <div class="map-wrap">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d175833.19804980516!2d-74.06149667755389!3d40.70622023780585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1591654242901!5m2!1sen!2sus" style="border:0" allowfullscreen loading="lazy" title="广东冷暖水电服务区域地图 - 纽约"></iframe>
+                        <p class="map-link"><a href="https://maps.app.goo.gl/42yvYqG9XXUFnU3z5?g_st=ic" target="_blank" rel="noopener">在 Google 地图上打开 →</a></p>
                     </div>
                 </div>
             </div>
@@ -507,8 +511,8 @@
 
     <!-- Sticky mobile call bar -->
     <div class="callbar" role="navigation" aria-label="快速联系">
-        <a class="call" href="tel:929-461-6893">☎ 打电话</a>
-        <a class="sms" href="sms:929-461-6893">✉ 发短信</a>
+        <a class="call" href="tel:929-461-6893">📱 打电话</a>
+        <a class="sms" href="sms:929-461-6893">💬 发短信</a>
     </div>
 
     <button id="toTop" aria-label="回到顶部">↑</button>
