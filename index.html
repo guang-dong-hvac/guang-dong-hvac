@@ -208,6 +208,13 @@
 
         /* ---- FAQ ---- */
         .faq-list { display: flex; flex-direction: column; gap: 14px; }
+        .posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 26px; }
+        .post-card { display: block; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; text-decoration: none; color: var(--ink); transition: transform .2s, box-shadow .2s; }
+        .post-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(15,42,67,.12); }
+        .post-card .tag { color: var(--green-dark); font-weight: 700; font-size: .85rem; letter-spacing: .06em; }
+        .post-card h3 { font-size: 1.12rem; margin: 8px 0 6px; color: var(--navy); line-height: 1.5; }
+        .post-card p { color: var(--muted); font-size: .95rem; margin: 0; }
+        .post-card .more { color: var(--green-dark); font-weight: 700; font-size: .95rem; margin-top: 10px; display: inline-block; }
         .faq-item { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
         .faq-item h3 { font-size: 1.2rem; color: var(--navy); margin-bottom: 6px; }
         .faq-item h3::before { content: "Q "; color: var(--orange); font-weight: 900; }
@@ -394,10 +401,39 @@
             </div>
         </section>
 
+        <!-- 实用知识 -->
+        <section class="section alt" id="posts">
+            <div class="wrap">
+                <p class="kicker">04 · 实用知识</p>
+                <h2>实用知识</h2>
+                <p class="section-sub">空调、热水、报修，常见问题先看这里。</p>
+                <div class="posts">
+                    <a class="post-card" href="articles/central-ac-cost-nyc.html">
+                        <span class="tag">安装知识</span>
+                        <h3>纽约装一台中央空调到底多少钱？</h3>
+                        <p>价格看房子面积、匹数、风管等 6 点，电话里怎么问才问到点子上。</p>
+                        <span class="more">阅读全文 →</span>
+                    </a>
+                    <a class="post-card" href="articles/describe-ac-problem.html">
+                        <span class="tag">报修指南</span>
+                        <h3>空调坏了，怎么跟师傅描述？</h3>
+                        <p>冰不冰、结霜、漏水哪里漏——记住 5 点，师傅电话里就能判断。</p>
+                        <span class="more">阅读全文 →</span>
+                    </a>
+                    <a class="post-card" href="articles/water-heater-repair-or-replace.html">
+                        <span class="tag">选购维修</span>
+                        <h3>热水炉 vs 热水器：换新怎么选？</h3>
+                        <p>储水式和即热式的区别，旧机器什么时候修、什么时候该换。</p>
+                        <span class="more">阅读全文 →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- FAQ -->
         <section class="section" id="faq">
             <div class="wrap">
-                <p class="kicker">04 · 常见问题</p>
+                <p class="kicker">05 · 常见问题</p>
                 <h2>常见问题</h2>
                 <div class="faq-list">
                     <div class="faq-item">
@@ -439,7 +475,7 @@
         <!-- Contact -->
         <section class="section contact" id="contact">
             <div class="wrap">
-                <p class="kicker">05 · 联系方式</p>
+                <p class="kicker">06 · 联系方式</p>
                 <h2>联系方式</h2>
                 <div class="contact-grid">
                     <div class="contact-card">
